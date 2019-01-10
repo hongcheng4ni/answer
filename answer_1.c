@@ -1,4 +1,4 @@
-bool isSubset(char *arr_1, char *arr_2){
+int isSubset(char *arr_1, char *arr_2){
   int i,j;
   int *rec = calloc(26,sizeof(int));
   
@@ -11,11 +11,11 @@ bool isSubset(char *arr_1, char *arr_2){
   for(i=0;i<strlen(arr_2);i++){
     j = (int) arr_2[i] - 65;
     if(rec[j]==0){
-      return false;
+      return 0;
     }
   }
   
   free(rec);
   
-  return true;
+  return 1;
 }
