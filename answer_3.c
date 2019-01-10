@@ -7,13 +7,13 @@ int* nextFibonacci(int* arr){
     p_fn  = 1;
     fn  = 1;
     n_fn  = 2;
-    while(arr[i] != fn){
+    while(arr[i] < fn){
       n_fn  = p_fn  + fn;
       p_fn  = fn;
       fn  = n_fn;
     }
     
-    ans[i]=n_fn;
+    ans[i]=fn;
   }
   
   return ans;
