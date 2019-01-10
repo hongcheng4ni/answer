@@ -9,7 +9,7 @@ bool isSubset(char *arr_1, char *arr_2){
   }
   
   for(i=0;i<strlen(arr_2);i++){
-    j = (int) arr_2 - 65;
+    j = (int) arr_2[i] - 65;
     if(rec[j]==0){
       return false;
     }
